@@ -108,6 +108,7 @@ def genOutput():
         count += 1
 
 def grabInput():
+    print ("\n" * 100)
     print ("~ A simple GreenScreen Removing tool")
     print ("~ Output wil be a PNG Sequence")
     footage = input("Enter Filename with extention (Ex.Footage.mp4) \n: ")
@@ -116,19 +117,19 @@ def grabInput():
 def start(footage):
     global length
     files = [f for f in os.listdir('.') if os.path.isfile(f)]
-    for f in files:
-        if f == footage:
-            frameCapture(footage,"footage") 
-            genOutput()
-            print("\n"+length+" Files Generated successfully! Check the 'out' directory.")
-            print("\nPress Enter to Exit.")
-            input("")
-            quit()
-        else:
-            print("File not found!!  Press Enter to Try Again.")
-            print("Remember to copy the file into this folder.")
-            input("")
-            break
+    if footage in files:
+        frameCapture(footage,"footage") 
+        genOutput()
+        print ("\n" * 100)
+        print("\n"+length+" Files Generated successfully! Check the 'out' directory.")
+        print("\nPress Enter to Exit.")
+        input("")
+        quit()
+    else:
+        print ("\n" * 100)
+        print(str(os.listdir('.'))+" File not found!!  Press Enter to Try Again.")
+        print("Remember to copy the file into this folder.")
+        input("")
 
 
 if __name__ == '__main__': 
