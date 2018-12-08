@@ -131,7 +131,6 @@ def start(footage):
         print("Remember to copy the file into this folder.")
         input("")
 
-
 if __name__ == '__main__': 
     done = False
     length = 0
