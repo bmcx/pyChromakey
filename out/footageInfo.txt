@@ -1,3 +1,0 @@
-Frame Width : 1280.0
-Frame Height : 720.0
-Frame Rate : 25.0
