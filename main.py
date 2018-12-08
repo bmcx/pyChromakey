@@ -127,10 +127,9 @@ def start(footage):
         quit()
     else:
         print ("\n" * 100)
-        print(str(os.listdir('.'))+" File not found!!  Press Enter to Try Again.")
+        print("File not found!! Press Enter to Try Again.")
         print("Remember to copy the file into this folder.")
         input("")
-
 
 if __name__ == '__main__': 
     done = False
