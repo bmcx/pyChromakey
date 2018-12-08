@@ -102,7 +102,7 @@ def genOutput():
     global length
     count = 0
     print ("\n" * 100)
-    for file in os.listdir("imgseq\\footage\\"):
+    for file in [file for file in os.listdir("imgseq\\footage\\") if file.endswith('.png')]:
         removeGreenScreen("imgseq\\footage\\"+str(file),"out\\"+str(file))
         print_progress(count, (length-1), prefix='Generating Output Files', suffix="[ File : "+str(file)+" ]", decimals=1, bar_length=50)
         count += 1
