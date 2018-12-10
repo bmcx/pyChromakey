@@ -10,7 +10,7 @@ I know there are better softwares that can do this kind a thing,but i wanted to 
 ### prerequisites 
  - python 3
  - opencv
- - pillow
+ - PIL
 
 ### usage 
 
